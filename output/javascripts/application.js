@@ -33,9 +33,13 @@ IntroToRuby.prototype = {
       .not("[data-pet-type='" + filter + "']");
   },
   updateHeader: function(filter){
-    this.element.find('.pet-count').text(
-      this.visibleRows(filter).length
-    );
+    rowCount = this.visibleRows(filter).length;
+    this.element.find('.pet-count').text(rowCount);
+
+    if(rowCount != 1) {
+      filter = filter + 's';
+    }
+
     this.element.find('.pet-type').text(filter);
   }
 };
