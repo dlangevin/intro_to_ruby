@@ -12,6 +12,11 @@ IntroToRuby.prototype = {
       // Gets the value of the select
       filter = $(this).val();
 
+      if(filter == 'all') {
+        _this.element.find('tbody tr').show();
+        return;
+      }
+
       // Show the appropriate rows
       _this.element
         .find("tbody tr[data-pet-type='" + filter + "']")

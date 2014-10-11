@@ -16,7 +16,7 @@
             <div class="form-group">
               <label for="pet_type">Filter by type</label>
               <select id="pet_type" class="form-control">
-                <option>Select One</option>
+                <option value="all">All Types</option>
                 <% pet_types.each do |type| %>
                   <option value="<%= type %>"><%= type %></option>
                 <% end %>
