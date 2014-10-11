@@ -1,6 +1,5 @@
 require 'csv'
 
-
 class PetCounter
 
   def initialize(data)
