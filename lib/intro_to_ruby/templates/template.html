@@ -8,7 +8,11 @@
   </head>
   <body>
     <div class="container">
-      <h1>Looks like we have <%= pets.length %> pets</h1>
+      <h1>
+        Looks like we have
+        <span class="pet-count"><%= pets.length %></span>
+        <span class="pet-type">pets</span>
+      </h1>
 
       <div class="row">
         <div class="col-xs-12 col-sm-6">
