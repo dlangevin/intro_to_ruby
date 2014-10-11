@@ -11,7 +11,7 @@
       <h1>
         Looks like we have
         <span class="pet-count"><%= pets.length %></span>
-        <span class="pet-type">pets</span>
+        <span class="pet-type">Pets</span>
       </h1>
 
       <div class="row">
@@ -20,7 +20,7 @@
             <div class="form-group">
               <label for="pet_type">Filter by type</label>
               <select id="pet_type" class="form-control">
-                <option value="all">All Types</option>
+                <option value="Pet">All Types</option>
                 <% pet_types.each do |type| %>
                   <option value="<%= type %>"><%= type %></option>
                 <% end %>

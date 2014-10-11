@@ -16,18 +16,20 @@ IntroToRuby.prototype = {
     });
   },
   showAppropriateRows: function(filter){
-    if(filter == 'all') {
-      this.element.find('tbody tr').show();
-      return;
-    }
     this.visibleRows(filter).show();
     this.hiddenRows(filter).hide();
   },
   visibleRows: function(filter){
+    if(filter == 'Pet') {
+      return this.element.find('tbody tr');
+    }
     return this.element
       .find("tbody tr[data-pet-type='" + filter + "']");
   },
   hiddenRows: function(filter){
+    if(filter == 'Pet') {
+      return this.element.find("tbody tr").not("*");
+    }
     return this.element
       .find("tbody tr")
       .not("[data-pet-type='" + filter + "']");
