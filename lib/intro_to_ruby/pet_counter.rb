@@ -7,6 +7,7 @@ class PetCounter
   end
 
   def create_file
+    puts "Writing to #{self.outfile_name}"
     File.open(self.outfile_name, 'w') do |f|
       f.puts(
         ERB.new(File.read(self.template_name)).result(binding)
@@ -14,9 +15,15 @@ class PetCounter
     end
   end
 
+  def pets
+    @pets ||= @data.map do |row|
+      Pet.new(row)
+    end
+  end
+
   def outfile_name
     File.expand_path(
-      "../../index.html",
+      "../../../output/index.html",
       __FILE__
     )
   end

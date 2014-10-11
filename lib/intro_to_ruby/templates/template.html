@@ -2,11 +2,14 @@
   <head>
     <title><%= @pet_type %></title>
     <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./javascripts/application.js"></script>
   </head>
   <body>
     <div class="container">
-      <h1><%= @pet_type %></h1>
+      <h1>Looks like we have <%= pets.length %> pets</h1>
+
       <table class="table">
         <thead>
           <tr>
@@ -15,9 +18,12 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Test</td>
-            <td>Abc</td>
+          <% pets.each do |pet| %>
+            <tr>
+              <td><%= pet.owner_name %></td>
+              <td><%= pet.name %></td>
+            </tr>
+          <% end %>
         </tbody>
       </table>
     </div>
