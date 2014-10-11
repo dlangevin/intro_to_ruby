@@ -10,17 +10,35 @@
     <div class="container">
       <h1>Looks like we have <%= pets.length %> pets</h1>
 
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <form>
+            <div class="form-group">
+              <label for="pet_type">Filter by type</label>
+              <select id="pet_type" class="form-control">
+                <option>Select One</option>
+                <% pet_types.each do |type| %>
+                  <option value="<%= type %>"><%= type %></option>
+                <% end %>
+              </select>
+            </div>
+          </form>
+        </div>
+      </div>
+
       <table class="table">
         <thead>
           <tr>
             <th>Name</th>
+            <th>Pet Type</th>
             <th>Pet Name</th>
           </tr>
         </thead>
         <tbody>
           <% pets.each do |pet| %>
-            <tr>
+            <tr data-pet-type="<%= pet.type %>">
               <td><%= pet.owner_name %></td>
+              <td><%= pet.type %></td>
               <td><%= pet.name %></td>
             </tr>
           <% end %>

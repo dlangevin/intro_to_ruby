@@ -15,6 +15,10 @@ class PetCounter
     end
   end
 
+  def pet_types
+    @pet_types ||= @pets.map(&:type).uniq
+  end
+
   def pets
     @pets ||= @data.map do |row|
       Pet.new(row)
