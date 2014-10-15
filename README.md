@@ -1,31 +1,8 @@
-Into to ruby course
-=======
-# IntroToRuby
+# Setup
 
-TODO: Write a gem description
+1. Download git http://git-scm.com/download/mac
+1. Install Homebrew http://brew.sh/
+1. Install ruby `brew install ruby`
+1. Download Sublime Text http://www.sublimetext.com/2
+1. Download this presentation: `git clone https://github.com/dlangevin/intro_to_ruby`
 
-## Installation
-
-Add this line to your application's Gemfile:
-
-    gem 'intro_to_ruby'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install intro_to_ruby
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
