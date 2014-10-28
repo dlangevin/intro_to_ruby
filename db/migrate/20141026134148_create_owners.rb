@@ -7,7 +7,7 @@ class CreateOwners < ActiveRecord::Migration
     end
 
     change_table :pets do |t|
-      t.references(:owners)
+      t.references(:owner)
     end
   end
 end
