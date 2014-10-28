@@ -9,7 +9,7 @@ class PetsController < ApplicationController
       @pets = @pets.where(pet_type: params[:pet_type])
     end
 
-    @pet_types = @pets.map(&:pet_type).uniq
+    @pet_types = Pet.pluck('DISTINCT pet_type')
 
     respond_with(@pets)
   end
