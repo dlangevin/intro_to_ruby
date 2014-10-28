@@ -1,7 +1,6 @@
 <h1>
   Looks like we have
-  <span class="pet-count"><%= @pets.length %></span>
-  <span class="pet-type">Pets</span>
+  <%= pluralize(@pets.length, 'Pet') %>
 </h1>
 
 <div class="row">
