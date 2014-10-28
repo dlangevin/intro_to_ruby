@@ -9,7 +9,7 @@
       <div class="form-group">
         <label for="pet_type">Filter by type</label>
         <select id="pet_type" class="form-control" name="pet_type">
-          <option value="Pet">All Types</option>
+          <option value="">All Types</option>
           <%= options_for_select(@pet_types, params[:pet_type]) %>
         </select>
       </div>
