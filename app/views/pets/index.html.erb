@@ -10,9 +10,7 @@
         <label for="pet_type">Filter by type</label>
         <select id="pet_type" class="form-control" name="pet_type">
           <option value="Pet">All Types</option>
-          <% @pet_types.each do |type| %>
-            <option value="<%= type %>" <%= 'selected="selected"' if type == params[:pet_type] %>><%= type %></option>
-          <% end %>
+          <%= options_for_select(@pet_types, params[:pet_type]) %>
         </select>
       </div>
       <div class="form-group">
